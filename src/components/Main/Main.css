@@ -1,18 +1,33 @@
 .main {
-  flex: 3;
-  min-width: 300px;
-  min-height: 100vh;
-  padding-bottom: 15vh;
+  /* flex: 3; */
+  /* min-width: 300px; */
+  max-height: 100vh;
+  /* background-color: green; */
+  transition: width 0.3s ease;
+  overflow: hidden;
+  /* display: flex; */
+  /* padding-bottom: 15vh; */
+  box-sizing: border-box;
   position: relative;
-  transition: flex 0.3s ease; /* 添加过渡动画 */
+  flex-direction: column;
+  /* transition: flex 0.3s ease; 添加过渡动画 */
+}
+
+.collapsedText {
+  /* background-color: green; */
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 
 .main .nav {
+  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 22px;
-  padding: 20px;
+  padding: 0px 20px;
+  /* padding-left: 20px; */
   color: #585858;
 }
 
@@ -24,14 +39,17 @@
 .main-container {
   max-width: 900px;
   margin: auto;
+  /* overflow-y: auto; */
 }
 
 .main .greet {
-  margin: 20px 0px;
+  /* background-color: blue; */
+  /* margin: 0px 0px; */
   font-size: 56px;
   color: #c4c7c5;
-  font-weight: 500;
-  padding: 20px;
+  font-weight: 900;
+  padding: 0px 20px;
+
 }
 
 .main .greet span{
@@ -80,8 +98,9 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: 650px;
   padding: 0px 20px;
+  /* background-color: red; */
   margin: auto;
 }
 

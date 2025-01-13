@@ -1,18 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import './Sidebar.css'
 import {assets} from '../../assets/assets'
 import { useState } from "react";
 import { Context } from "../../context/Context";
 
-const Sidebar = () => {
+const Sidebar = ({ isCollapsed, toggleCollapse }) => {
   const [extended, setExtended] = useState(false)
+  // 当 isCollapsed 改变时，更新 extended
+  useEffect(() => {
+    setExtended(!isCollapsed);
+  }, [isCollapsed]);
+
   const { chatSessions, setCurrentChatId, currentChatId, createNewChat } = useContext(Context); // 获取聊天历史
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{ width: isCollapsed ? '50px' : '200px' }}>
         <div className="top">
+          {/* <button className="toggle-btn" onClick={toggleCollapse}>
+          {isCollapsed ? 'Expand' : 'Collapse'}
+        </button> */}
           <img 
-            onClick={()=>setExtended(prev=>!prev)} 
+            onClick={toggleCollapse}
             className="menu" 
             src={assets.menu_icon} 
             alt="" />

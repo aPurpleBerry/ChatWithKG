@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
+/* 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
+} */
+
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* 防止内容溢出 */
 }
 
 /* #root {

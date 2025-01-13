@@ -1,11 +1,14 @@
 .sidebar {
-  min-height: 100vh;
-  display: inline-flex;
+  /* min-height: 100vh; */
+  /* width: 200px;
+  min-width: 50px; */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #f0f4f9;
   padding: 25px 15px;
-  transition: flex 0.3s ease, max-width 0.3s ease; /* 添加过渡动画 */
+  transition: width 0.3s ease; /* 添加过渡动画 */
+  overflow: hidden;
 }
 
 .sidebar img{

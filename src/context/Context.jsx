@@ -54,9 +54,14 @@ const ContextProvider = (props) => {
       // const formattedResponse = formatResponse(response); // 格式化机器人回复
       const reQ = await recommendQ(userMessage);
       try {
-
+        console.log('这里是推荐问题',reQ);
+        
         // 使用正则表达式提取中括号内的内容
-        const match = reQ.match(/\[.*?\]/);
+        // const match = reQ.match(/\[.*?\]/);
+        const regex = /\[([^\]]+)\]/;
+        const match = reQ.match(regex);
+
+        console.log('这里是推荐问题222',match);
 
         if (match) {
           // 将提取的字符串解析为数组

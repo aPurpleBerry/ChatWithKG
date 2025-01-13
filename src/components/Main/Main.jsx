@@ -3,8 +3,7 @@ import './Main.css'
 import {assets} from '../../assets/assets'
 import { useContext } from 'react'
 import { Context } from '../../context/Context'
-import { Button } from "antd"; 
-
+ import { Button } from 'antd'
 const Main = ({ isCollapsed, toggleCollapse }) => {
   // const {onSent, recentPrompt, showResult, loading, resultData, input, setInput }  = useContext(Context)
   // const { onSent, chatHistory, showResult, loading, input, setInput } = useContext(Context);
@@ -19,7 +18,7 @@ const Main = ({ isCollapsed, toggleCollapse }) => {
   return (
     <div className="main" 
           style={{ 
-            width: isCollapsed ? '100px' : '700px',
+            width: isCollapsed ? '100px' : '600px',
             backgroundColor: isCollapsed ? 'rgb(225, 230, 237)' : '#ffffff', // 根据 isCollapsed 切换颜色  
            }}>
       <Button className="toggle-btn" onClick={toggleCollapse}>

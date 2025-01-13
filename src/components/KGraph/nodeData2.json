@@ -1,0 +1,24 @@
+{
+    "nodes": [
+      {
+        "id": "0",
+        "data": {
+          "cluster": "a"
+        },
+        "weight": 30
+      },
+      {
+        "id": "1",
+        "data": {
+          "cluster": "a"
+        },
+        "weight": 50
+      }
+    ],
+    "edges": [
+      {
+        "source": "0",
+        "target": "1"
+      }
+    ]
+  }

@@ -18,10 +18,10 @@
   padding: 10px;
 }
 
-.graph .web3graph {
+.graph #web3graph {
   width: 100%;
-  height: calc(100vh - 250px);
-  background-color: #fff;
+  /* height: calc(100vh - 250px); */
+  /* background-color: green; */
 }
 
 .graph .properties {

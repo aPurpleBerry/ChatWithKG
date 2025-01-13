@@ -150,6 +150,24 @@ const Graph = () => {
         .text(item.label);
     });
   };
+  const [data, setData] = useState(null); // 保存后端返回的数据
+  // 点击按钮时下载 JSON 文件
+  const downloadJson = () => {
+    if (!data) return;
+
+    const json = JSON.stringify(data, null, 2); // 格式化 JSON 数据
+    const blob = new Blob([json], { type: 'application/json' }); // 创建 Blob 对象
+    const url = URL.createObjectURL(blob); // 创建 URL 对象
+
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'output.json'; // 指定文件名
+    link.click();
+
+    // 清理 URL 对象
+    URL.revokeObjectURL(url);
+  };
 
   // 请求图数据
   const fetchGraphData = async (nGQL) => {
@@ -158,6 +176,8 @@ const Graph = () => {
       const response = await axios.post('http://localhost:8081/ngql/getNodesAndEdgesByNGQL', { query: nGQL });
       console.log('response.data.data = ' ,response.data.data);
       const data = response.data.data;
+      setData(response.data.data); // 保存数据到状态
+
       // 更新原始数据
       setOriginalNodes(data.nodes);
       setOriginalEdges(data.edges);
@@ -420,6 +440,9 @@ const Graph = () => {
 
   return (
     <div className="graph">
+      <div>
+      <button onClick={downloadJson} disabled={!data}>下载 JSON 文件</button>
+    </div>
       <div className="toolbar">
       {/* 数据库语句 */}
       <Card

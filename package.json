@@ -13,9 +13,11 @@
     "@antv/algorithm": "^0.1.26",
     "@antv/g6": "^5.0.42",
     "@google/generative-ai": "^0.21.0",
+    "@monaco-editor/react": "^4.6.0",
     "antd": "^5.22.7",
     "axios": "^1.7.9",
     "d3": "^7.9.0",
+    "monaco-editor": "^0.52.2",
     "openai": "^4.77.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

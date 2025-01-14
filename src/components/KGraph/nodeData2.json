@@ -18,7 +18,8 @@
     "edges": [
       {
         "source": "0",
-        "target": "1"
+        "target": "1",
+        "edge_type": "hahaha"
       }
     ]
   }

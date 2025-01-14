@@ -3,6 +3,7 @@
   /* background-color:red; */
   /* border-left: 1px solid #e0e0e0;  */
   height: 100vh;
+  position: relative; /* 设置父元素为相对定位 */
 }
 
 
@@ -29,4 +30,77 @@
   max-height: 120px;
   /* overflow: scroll;  */
   overflow-y: auto; /* 当内容超出时才显示滚动条 */
+}
+
+.graph .hoverBox {
+  width: 150px;
+  height: 170px;
+  position: absolute; /* 子元素绝对定位，相对于父元素定位 */
+  top: 50px;           
+  right: 50px;          
+  /* transform: translate(-50%, -50%);  */
+  background-color: white;
+  padding: 0px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.graph .hoverBox .legendTitle {
+  /* background-color: red; */
+  text-align: center;
+  margin: 10px 0px;
+  color: rgb(45, 70, 123);
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+/* 图例 */
+.legend {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  /* border: 1px solid #ccc; */
+  /* background-color: #f9f9f9; */
+  /* width: 200px; */
+  font-size: 12px;
+  /* background-color: red; */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  /* background-color: yellow; */
+}
+.legend-item:hover {
+  cursor: pointer;
+  background-color: #E0EDF9;
+}
+
+.legend-item.active {
+  background-color: #d1e7fd; /* 点击后的激活状态样式 */
+}
+
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.color-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.inputContainer {
+  width: 200px;
+  height: 100px;
+  z-index: 100;
+  position: absolute; /* 子元素绝对定位，相对于父元素定位 */
+  top: 50px;           
+  left: 50px;       
 }

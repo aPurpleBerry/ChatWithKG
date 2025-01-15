@@ -1,0 +1,412 @@
+{
+  "nodes": [
+    {
+      "type": "entity",
+      "id": "entity_PlatON"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Anthony_Rose"
+    },
+    {
+      "type": "entity",
+      "id": "entity_MOBY"
+    },
+    {
+      "type": "entity",
+      "id": "entity_玖富集团"
+    },
+    {
+      "type": "entity",
+      "id": "entity_zkSpin"
+    },
+    {
+      "type": "entity",
+      "id": "entity_No_record"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Polygon_zkEVM"
+    },
+    {
+      "type": "entity",
+      "id": "entity_zkSwap_Finance_ZF"
+    },
+    {
+      "type": "entity",
+      "id": "entity_沃尔沃汽车"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Vassilis_Tziokas"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Fabric_Cryptography"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Inco_Network"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Tabi"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_893"
+    },
+    {
+      "type": "entity",
+      "id": "entity_zkCandy"
+    },
+    {
+      "type": "entity",
+      "id": "entity_KOLnet"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_1515"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_922"
+    },
+    {
+      "type": "ecology",
+      "id": "ecology_"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Hashed"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Rubic"
+    },
+    {
+      "type": "entity",
+      "id": "entity_大湾区共同家园发展基金"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Scroll"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Coinbase_Ventures"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_1182"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_Launchpad"
+    },
+    {
+      "type": "entity",
+      "id": "entity_PancakeSwap"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Concordium"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Canto"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Alex_Gluchowski"
+    },
+    {
+      "type": "entity",
+      "id": "entity_星耀资本"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Lightspeed_Venture"
+    },
+    {
+      "type": "ecology",
+      "id": "ecology_Ethereum"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_960"
+    },
+    {
+      "type": "entity",
+      "id": "entity_先知资本"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Andreessen_Horowitz"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_959"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Mirana_Ventures"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Aleo"
+    },
+    {
+      "type": "news",
+      "id": "news_3858"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Ingonyama"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Variant_Fund"
+    },
+    {
+      "type": "entity",
+      "id": "entity_深创投"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Uniswap"
+    },
+    {
+      "type": "entity",
+      "id": "entity_DAO_Maker"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_941"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Fjord_Foundry"
+    },
+    {
+      "type": "entity",
+      "id": "entity_IOSG_Ventures"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Linea"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Rhinestone"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Sei_Network"
+    },
+    {
+      "type": "entity",
+      "id": "entity_USV"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Blockchain_Capital"
+    },
+    {
+      "type": "entity",
+      "id": "entity_zkSync_ZK"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Meghan_Hughes"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_734"
+    },
+    {
+      "type": "entity",
+      "id": "entity_GRVT"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Marcin_Michalski"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Morph"
+    },
+    {
+      "type": "entity",
+      "id": "entity_北拓资本"
+    },
+    {
+      "type": "entity",
+      "id": "entity_1kx"
+    },
+    {
+      "type": "entity",
+      "id": "entity_zkSPARK"
+    },
+    {
+      "type": "entity",
+      "id": "entity_SushiSwap"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_zk"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Tevaera"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_DeFi"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Dragonfly"
+    },
+    {
+      "type": "entity",
+      "id": "entity_StarkNet"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_DEX"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Monad"
+    },
+    {
+      "type": "ecology",
+      "id": "ecology_ZkSync"
+    },
+    {
+      "type": "entity",
+      "id": "entity_建元基金"
+    },
+    {
+      "type": "entity",
+      "id": "entity_TRALA"
+    },
+    {
+      "type": "entity",
+      "id": "entity_eGirl_Capital"
+    },
+    {
+      "type": "fund_raising_event",
+      "id": "fund_raising_event_726"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Delphi_Digital"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Blockchaincom"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Bancor"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Clave"
+    },
+    {
+      "type": "entity",
+      "id": "entity_安澜资本"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Impossible_Finance"
+    },
+    {
+      "type": "entity",
+      "id": "entity_OKX_Ventures"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Michael_Lee"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_Layer1"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_Layer2"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Pharos"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Maverick_Protocol"
+    },
+    {
+      "type": "entity",
+      "id": "entity_捷豹路虎JLR"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Balancer"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_Infra"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Marco_Cora"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Rich_Kim"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Taiko"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Bounce_Finance"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Placeholder"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Nana_Murugesan"
+    },
+    {
+      "type": "entity",
+      "id": "entity_Kakarot"
+    },
+    {
+      "type": "project_tag",
+      "id": "project_tag_Parallel_EVM"
+    },
+    {
+      "type": "entity",
+      "id": "entity_0x"
+    }
+  ],
+  "edges": [
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Rich_Kim",
+      "type": "funded_by"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Linea",
+      "type": "similar_project"
+    }
+  ]
+}

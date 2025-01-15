@@ -99,8 +99,14 @@
 .inputContainer {
   width: 200px;
   height: 100px;
+  /* background-color: #f4f4f4; */
   z-index: 100;
   position: absolute; /* 子元素绝对定位，相对于父元素定位 */
   top: 50px;           
   left: 50px;       
+  margin-bottom: 10px;
+}
+
+.Editor {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

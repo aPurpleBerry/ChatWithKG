@@ -491,6 +491,42 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
       // console.log("Node ID:", node.id);
     });
   };
+  
+  /********************************输入******************************* */
+  const [isPopoverVisible, setPopoverVisible] = useState(false); // 控制 Popover 显示状态
+  const [content, setContent] = useState(""); // 存储输入内容
+
+  // 聚焦时显示 Popover
+  const handleFocus = () => {
+    setPopoverVisible(true);
+  };
+
+  // 失焦时隐藏 Popover，但要确保不是点击到 Popover 内容
+  const handleBlur = (e) => {
+    // 检查点击目标是否在 Popover 或编辑器内
+    const relatedTarget = e.relatedTarget;
+    if (
+      relatedTarget &&
+      (relatedTarget.classList.contains("ant-popover") ||
+        relatedTarget.closest(".ant-popover"))
+    ) {
+      return; // 如果点击目标在 Popover 内，不隐藏
+    }
+
+    setPopoverVisible(false); // 否则隐藏
+  };
+
+  // 更新输入框内容
+  const handleInputChange = (value, event) => {
+    // setContent(e.target.value);
+    console.log('editor === ',value,event);
+    
+  };
+
+  // 更新编辑器内容
+  const handleEditorChange = (value) => {
+    setContent(value || ""); // 防止 null 值
+  };
 
   return (
     <div className="graph">
@@ -509,7 +545,42 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
       </div>
       {/* <Input></Input> */}
       <div className="inputContainer">
-      <Editor defaultLanguage="sql" defaultValue="// 请输入Nebulagraph图数据库语言" />;
+        {/* 用户输入框 */}
+      <input
+        type="text"
+        value={content} // 与状态绑定
+        onFocus={handleFocus} // 聚焦事件
+        onBlur={handleBlur} // 失焦事件
+        onChange={handleInputChange} // 输入框内容变化
+        placeholder="请输入内容"
+        style={{
+          width: "100%",
+          padding: "10px",
+          fontSize: "16px",
+          border: "1px solid #ccc",
+          borderRadius: "4px",
+        }}
+      />
+      {/* Antd 输入框 */}
+      <Popover
+        content={
+          <Editor
+            width="300px"
+            height="300px"
+            defaultLanguage="sql"
+            value={content} // 与状态绑定
+            onChange={handleEditorChange} // 编辑器输入时更新状态
+            options={{
+              automaticLayout: true,
+              minimap: { enabled: false },
+            }}
+          />
+        }
+        placement="bottom"
+        trigger="click" // 让 Popover 在聚焦时显示
+        open={isPopoverVisible} // 控制显示状态
+      ></Popover>
+      {/* <Editor defaultLanguage="sql" defaultValue="// 请输入Nebulagraph图数据库语言" />; */}
       </div>
       {/* <button onClick={handle}>testtest</button>
       <button onClick={handle2}>子图</button>

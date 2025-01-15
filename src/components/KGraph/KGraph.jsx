@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 import axios from 'axios';
 import { Context } from '../../context/Context'
 import { EdgeEvent, Graph, NodeEvent } from '@antv/g6';
-import { getInDegree } from '@antv/algorithm';
+import { findShortestPath,getDegree } from '@antv/algorithm';
 // import G6 from '@antv/g6';
 // import { degree } from '@antv/algorithm'
 // import { findShortestPath } from '@antv/algorithm';
@@ -12,7 +12,8 @@ import './KGraph.css';
 import data from './nodeData.json'
 // import data from './output.json'
 import data2 from './nodeData2.json'
-import outputdata from './output.json'
+import outputdata from './graph_example.json'
+// import outputdata from './output.json'
 
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
 
@@ -41,27 +42,43 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     console.log('fetchGraphData');
     
     try {
-      const response = await axios.post('http://localhost:8081/ngql/getNodesAndEdgesByNGQL', {
-        query: 'match (v1)-[e]->(v2) return id(v1), e, v2 limit 50',
-      });
-      const data = response.data.data;
-      // const data = outputdata;
+      /****************调取后端********************/
+      // const response = await axios.post('http://localhost:8081/ngql/getNodesAndEdgesByNGQL', {
+      //   query: 'match (v1)-[e]->(v2) return id(v1), e, v2 limit 50',
+      // });
+      // const data = response.data.data;
 
-      // 转换数据为 Graph 需要的格式
-      const transformedData = {
-        nodes: data.nodes.map((node) => ({
-          id: node.id,
-          data: { cluster: node.type },
-        })),
-        edges: data.edges.map((edge) => ({
-          source: edge.source,
-          target: edge.target,
-          edge_type: edge.type,
-        })),
-      };
+      // // 转换数据为 Graph 需要的格式
+      // const transformedData = {
+      //   nodes: data.nodes.map((node) => ({
+      //     id: node.id,
+      //     data: { cluster: node.type },
+      //   })),
+      //   edges: data.edges.map((edge) => ({
+      //     source: edge.source,
+      //     target: edge.target,
+      //     edge_type: edge.type,
+      //   })),
+      // };
+      // transformedData.nodes.forEach((node) => {
+      //   node.size = Math.random() * 20 + 6;
+      // });
+
+      /****************假数据********************/
+      const data = outputdata;
+      const transformedData = data;
       transformedData.nodes.forEach((node) => {
         node.size = Math.random() * 20 + 6;
       });
+
+      // 给每一条边加一个ID
+      // transformedData.edges = data.edges.map((edge, index) => ({
+      //   ...edge,
+      //   id: `edge-${index}`, // 生成唯一 id，例如 edge-0, edge-1
+      // }));
+      // console.log('假数据在此！',transformedData);
+      
+      /****************假数据********************/
 
       // 更新图数据状态
       setGraphData(transformedData); 
@@ -342,15 +359,91 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     setIsActive(!isActive);
     setShowDiv(!showDiv); // 切换新 div 的显示状态
   };
+
   function handleEditorChange(value, event) {
     console.log('here is the current model value:', JSON.stringify(value));
   }
+  findShortestPath
 
+  const find = (state = "selected") => {
+    return graph.getElementDataByState('node', state)
+  }
+
+  const warning = (content) => {
+    message.open({
+      type: 'warning',
+      content
+    });
+  };
+
+  const handleFindShortestPath = () => {
+    const selectedNodes = find()
+    // console.log('当前节点们的状态 = ',find());
+    
+    if(selectedNodes.length !== 2 ) {
+      warning('请选择两个节点，按shift键多选')
+    } else {
+      console.log('ok',selectedNodes);
+      const { length, path } = findShortestPath(graphData, selectedNodes[0].id, selectedNodes[1].id);
+      console.log('handleFindShortestPath = ',length,path);
+
+      if(length !== Infinity ) {
+        // 点亮路径
+        const states = {};
+        graphData.nodes.forEach(({ id }) => {
+          if (path.includes(id)) states[id] = 'selected';
+          else states[id] = '';
+        });
+
+        graphData.edges.forEach(({ id, source, target }) => {
+          const sourceIndex = path.indexOf(source);
+          const targetIndex = path.indexOf(target);
+          if (sourceIndex === -1 || targetIndex === -1) return;
+          if (Math.abs(sourceIndex - targetIndex) === 1) states[id] = 'selected';
+          else states[id] = '';
+        });
+
+        console.log('states == ',states);
+        
+
+        graph.setElementState(states);
+        graph.frontElement(path);
+      } else {
+        warning('两个节点没有路径')
+      }
+    }
+  }
+
+  const downloadJson = () => {
+    if (!graphData) return;
+
+    const json = JSON.stringify(graphData, null, 2); // 格式化 JSON 数据
+    const blob = new Blob([json], { type: 'application/json' }); // 创建 Blob 对象
+    const url = URL.createObjectURL(blob); // 创建 URL 对象
+
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'output.json'; // 指定文件名
+    link.click();
+
+    // 清理 URL 对象
+    URL.revokeObjectURL(url);
+  };
+  
+  const testG6 = () => {
+    // getDegree返回所有结点的度数
+    console.log('所有节点的度数',getDegree(graphData)); 
+    console.log('所有节点的度数',Object.keys(getDegree(graphData)).length); 
+    
+  }
   return (
 
     <div className="graph">
     <Spin tip="Loading" spinning={loading} style={{marginTop: '300px'}}>
-
+      <Button onClick={handleFindShortestPath}>最短路径</Button>
+      <Button onClick={downloadJson}>下载JSON数据</Button>
+      {/* <Button onClick={testG6}>测试G6按钮</Button> */}
       {/* 图例 */}
        <div className="hoverBox" ref={hoverBox}>
         <div className="legendTitle">
@@ -399,6 +492,7 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     )}
   </div>
       </div>
+      {/* 搜索 */}
       <div className={`search ${isActive ? "active" : ""}`}>
         <input
           type="text"

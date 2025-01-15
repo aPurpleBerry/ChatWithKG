@@ -62,3 +62,7 @@ setElementState(id, state) 比如setElementState("01","selected")
 点击事件->事件委托
 选择对应类节点->filter
 遍历数组->foreach
+
+
+## 找到算法所有暴露的函数了
+V:\Web\SuperScopeChat\superscopechat2.0_react\node_modules\.pnpm\@antv+algorithm@0.1.26\node_modules\@antv\algorithm\lib\index.d.ts

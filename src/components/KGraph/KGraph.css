@@ -110,3 +110,101 @@
 .Editor {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+/************************输入框**********************/
+.search {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 50px;
+  /* background-color: red; */
+  z-index: 100;
+  font-size: 18px;
+}
+
+.search .input {
+  /* background-color: yellow; */
+  border: 0;
+  /* font-size: 18px; */
+  /* padding: 15px; */
+  height: 50px;
+  width: 25px;
+  transition: width 0.3s ease;
+  z-index: 100;
+  padding: 0px 13px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  /* border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px; */
+}
+
+.btn {
+  /* background-color: green; */
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  /* font-size: 24px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  /* border-top-right-radius: 50%;
+  border-bottom-right-radius: 20px; */
+  border-radius: 50%;
+  padding-top: 7px;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+  font-size: 15px;
+  background-color: #fff;
+  cursor: not-allowed;
+  /* border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%; */
+}
+
+.search.active .btn {
+  transform: translateX(180px);
+  /* background-color: #E0EDF9; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 动态生成的新 div 样式 */
+.result-box {
+  margin-top: 10px;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+
+/* 简单的动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

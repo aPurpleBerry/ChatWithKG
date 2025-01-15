@@ -493,40 +493,16 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
   };
   
   /********************************输入******************************* */
-  const [isPopoverVisible, setPopoverVisible] = useState(false); // 控制 Popover 显示状态
-  const [content, setContent] = useState(""); // 存储输入内容
+  const [isActive, setIsActive] = useState(false); // 控制搜索框伸缩
+  const [showDiv, setShowDiv] = useState(false); // 控制新 div 的显示
 
-  // 聚焦时显示 Popover
-  const handleFocus = () => {
-    setPopoverVisible(true);
+  const handleToggle = () => {
+    setIsActive(!isActive);
+    setShowDiv(!showDiv); // 切换新 div 的显示状态
   };
-
-  // 失焦时隐藏 Popover，但要确保不是点击到 Popover 内容
-  const handleBlur = (e) => {
-    // 检查点击目标是否在 Popover 或编辑器内
-    const relatedTarget = e.relatedTarget;
-    if (
-      relatedTarget &&
-      (relatedTarget.classList.contains("ant-popover") ||
-        relatedTarget.closest(".ant-popover"))
-    ) {
-      return; // 如果点击目标在 Popover 内，不隐藏
-    }
-
-    setPopoverVisible(false); // 否则隐藏
-  };
-
-  // 更新输入框内容
-  const handleInputChange = (value, event) => {
-    // setContent(e.target.value);
-    console.log('editor === ',value,event);
-    
-  };
-
-  // 更新编辑器内容
-  const handleEditorChange = (value) => {
-    setContent(value || ""); // 防止 null 值
-  };
+  function handleEditorChange(value, event) {
+    console.log('here is the current model value:', JSON.stringify(value));
+  }
 
   return (
     <div className="graph">
@@ -543,9 +519,44 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
           ))}
         </div>
       </div>
+      <div className={`search ${isActive ? "active" : ""}`}>
+        <input
+          type="text"
+          className="input"
+          placeholder="请输入nebulagraph语言..."
+          disabled
+          onFocus={() => setIsActive(true)}
+        />
+        <button className="btn" onClick={handleToggle}>
+          <svg
+            className="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+          >
+            <path
+              d="M448 85.333333a362.666667 362.666667 0 1 0 207.189333 660.352l174.208 174.250667a64 64 0 1 0 90.538667-90.538667l-174.250667-174.208A362.666667 362.666667 0 0 0 448 85.333333zM213.333333 448a234.666667 234.666667 0 1 1 469.333334 0 234.666667 234.666667 0 0 1-469.333334 0z"
+              fill="#000000"
+            ></path>
+          </svg>
+        </button>
+        {/* 点击按钮后显示的新 div */}
+        {showDiv && (
+          <div className="result-box">
+            {/* <p>这里是动态生成的内容！</p> */}
+            <Editor 
+              defaultLanguage="sql" 
+              defaultValue="// Nebulagraph" 
+              onChange={handleEditorChange}
+              scroll
+            />
+          </div>
+        )}
+      </div>
       {/* <Input></Input> */}
-      <div className="inputContainer">
-        {/* 用户输入框 */}
+      {/* <div className="inputContainer">
       <input
         type="text"
         value={content} // 与状态绑定
@@ -561,7 +572,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
           borderRadius: "4px",
         }}
       />
-      {/* Antd 输入框 */}
       <Popover
         content={
           <Editor
@@ -580,8 +590,8 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
         trigger="click" // 让 Popover 在聚焦时显示
         open={isPopoverVisible} // 控制显示状态
       ></Popover>
+      </div> */}
       {/* <Editor defaultLanguage="sql" defaultValue="// 请输入Nebulagraph图数据库语言" />; */}
-      </div>
       {/* <button onClick={handle}>testtest</button>
       <button onClick={handle2}>子图</button>
       <button onClick={handle3}>子图</button> */}

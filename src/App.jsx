@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./components/Siderbar/Sidebar";
 import Main from "./components/Main/Main";
 import KGraph from "./components/KGraph/KGraph";
+import KGraphTest from "./components/KGraphTest/KGraphTest";
 import './App.css'
 
 const App = () => {
@@ -38,7 +39,11 @@ const App = () => {
         isCollapsed={isMainCollapsed}
         toggleCollapse={() => setMainCollapsed(!isMainCollapsed)}
       />
-      <KGraph 
+      {/* <KGraph 
+        isSidebarCollapsed={isSidebarCollapsed}
+        isMainCollapsed={isMainCollapsed}
+      /> */}
+      <KGraphTest 
         isSidebarCollapsed={isSidebarCollapsed}
         isMainCollapsed={isMainCollapsed}
       />

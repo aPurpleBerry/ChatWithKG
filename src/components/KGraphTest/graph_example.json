@@ -1,0 +1,719 @@
+{
+  "nodes": [
+    {
+      "id": "entity_USV",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 7.573103128676445
+    },
+    {
+      "id": "entity_Anthony_Rose",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 8.967430132410836
+    },
+    {
+      "id": "entity_Blockchain_Capital",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 9.351025835060927
+    },
+    {
+      "id": "entity_zkSync_ZK",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 20.81975006573805
+    },
+    {
+      "id": "entity_玖富集团",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 23.26335595991774
+    },
+    {
+      "id": "entity_Meghan_Hughes",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 21.298692310288136
+    },
+    {
+      "id": "fund_raising_event_734",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 25.123618415400703
+    },
+    {
+      "id": "entity_沃尔沃汽车",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 14.171766693835934
+    },
+    {
+      "id": "entity_GRVT",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.903928501094732
+    },
+    {
+      "id": "entity_Marcin_Michalski",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 9.24734876486568
+    },
+    {
+      "id": "entity_北拓资本",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.53577934256779
+    },
+    {
+      "id": "entity_1kx",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 25.78439646273173
+    },
+    {
+      "id": "entity_Vassilis_Tziokas",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 23.552901760618916
+    },
+    {
+      "id": "project_tag_zk",
+      "data": {
+        "cluster": "project_tag"
+      },
+      "size": 7.0356094019393325
+    },
+    {
+      "id": "entity_Fabric_Cryptography",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 10.791774309487131
+    },
+    {
+      "id": "entity_Inco_Network",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 10.111568971566374
+    },
+    {
+      "id": "entity_Tevaera",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 7.334631674697477
+    },
+    {
+      "id": "entity_Dragonfly",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 21.14173005146875
+    },
+    {
+      "id": "entity_建元基金",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 23.74395514142125
+    },
+    {
+      "id": "fund_raising_event_893",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 14.363831730148998
+    },
+    {
+      "id": "entity_TRALA",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 11.068399393407423
+    },
+    {
+      "id": "fund_raising_event_1515",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 14.408446910848735
+    },
+    {
+      "id": "fund_raising_event_922",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 11.22550919682693
+    },
+    {
+      "id": "entity_eGirl_Capital",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 10.175229335207696
+    },
+    {
+      "id": "fund_raising_event_726",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 6.5929742755193645
+    },
+    {
+      "id": "entity_Hashed",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 22.650340333349956
+    },
+    {
+      "id": "entity_大湾区共同家园发展基金",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 19.19796914611866
+    },
+    {
+      "id": "entity_Delphi_Digital",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 14.61935395409429
+    },
+    {
+      "id": "entity_Coinbase_Ventures",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 7.84607700552621
+    },
+    {
+      "id": "fund_raising_event_1182",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 18.390494117709167
+    },
+    {
+      "id": "entity_Blockchaincom",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 25.05987853938287
+    },
+    {
+      "id": "entity_Clave",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 13.601091974837523
+    },
+    {
+      "id": "entity_安澜资本",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 22.64921827266129
+    },
+    {
+      "id": "entity_Alex_Gluchowski",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 6.382894731068846
+    },
+    {
+      "id": "entity_星耀资本",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 21.394261078363517
+    },
+    {
+      "id": "entity_Lightspeed_Venture",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 9.05851674445936
+    },
+    {
+      "id": "entity_OKX_Ventures",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 7.54236064829989
+    },
+    {
+      "id": "ecology_Ethereum",
+      "data": {
+        "cluster": "ecology"
+      },
+      "size": 15.761462886031458
+    },
+    {
+      "id": "fund_raising_event_960",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 14.368318121106988
+    },
+    {
+      "id": "entity_Michael_Lee",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 24.765158428530345
+    },
+    {
+      "id": "entity_先知资本",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.465946484854427
+    },
+    {
+      "id": "project_tag_Layer2",
+      "data": {
+        "cluster": "project_tag"
+      },
+      "size": 16.14423120882794
+    },
+    {
+      "id": "entity_Andreessen_Horowitz",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 10.111099696640323
+    },
+    {
+      "id": "fund_raising_event_959",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 15.538638138899774
+    },
+    {
+      "id": "entity_Mirana_Ventures",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.3949756504544
+    },
+    {
+      "id": "entity_捷豹路虎JLR",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.977033261133506
+    },
+    {
+      "id": "entity_Ingonyama",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 21.80193701942421
+    },
+    {
+      "id": "entity_Variant_Fund",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 7.103461467344378
+    },
+    {
+      "id": "entity_深创投",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 13.1426311059804
+    },
+    {
+      "id": "project_tag_Infra",
+      "data": {
+        "cluster": "project_tag"
+      },
+      "size": 6.4115064462322415
+    },
+    {
+      "id": "entity_Marco_Cora",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 13.76007709546362
+    },
+    {
+      "id": "fund_raising_event_941",
+      "data": {
+        "cluster": "fund_raising_event"
+      },
+      "size": 23.669445315672583
+    },
+    {
+      "id": "entity_Rich_Kim",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 6.480278798877829
+    },
+    {
+      "id": "entity_Placeholder",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 16.756884643292445
+    },
+    {
+      "id": "entity_IOSG_Ventures",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 18.705307427874057
+    },
+    {
+      "id": "entity_Nana_Murugesan",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 22.895873428606016
+    },
+    {
+      "id": "entity_Kakarot",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 11.362382138711688
+    },
+    {
+      "id": "entity_Linea",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 24.163813655162095
+    },
+    {
+      "id": "entity_Rhinestone",
+      "data": {
+        "cluster": "entity"
+      },
+      "size": 23.038119945593706
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-0",
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Delphi_Digital",
+      "edge_type": "funded_by"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Rich_Kim",
+      "edge_type": "funded_by",
+      "id": "edge-1"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Linea",
+      "edge_type": "similar_project",
+      "id": "edge-2"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "project_tag_Infra",
+      "edge_type": "tagged_with",
+      "id": "edge-3"
+    },
+    {
+      "source": "entity_先知资本",
+      "target": "fund_raising_event_960",
+      "edge_type": "invested_in",
+      "id": "edge-4"
+    },
+    {
+      "source": "entity_星耀资本",
+      "target": "fund_raising_event_960",
+      "edge_type": "invested_in",
+      "id": "edge-5"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Placeholder",
+      "edge_type": "funded_by",
+      "id": "edge-6"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Fabric_Cryptography",
+      "edge_type": "funded_by",
+      "id": "edge-7"
+    },
+    {
+      "source": "entity_玖富集团",
+      "target": "fund_raising_event_959",
+      "edge_type": "invested_in",
+      "id": "edge-8"
+    },
+    {
+      "source": "entity_安澜资本",
+      "target": "fund_raising_event_1515",
+      "edge_type": "invested_in",
+      "id": "edge-9"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Rhinestone",
+      "edge_type": "funded_by",
+      "id": "edge-10"
+    },
+    {
+      "source": "entity_安澜资本",
+      "target": "fund_raising_event_726",
+      "edge_type": "invested_in",
+      "id": "edge-11"
+    },
+    {
+      "source": "entity_沃尔沃汽车",
+      "target": "fund_raising_event_1182",
+      "edge_type": "invested_in",
+      "id": "edge-12"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Tevaera",
+      "edge_type": "funded_by",
+      "id": "edge-13"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Meghan_Hughes",
+      "edge_type": "funded_by",
+      "id": "edge-14"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Anthony_Rose",
+      "edge_type": "funded_by",
+      "id": "edge-15"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Marcin_Michalski",
+      "edge_type": "funded_by",
+      "id": "edge-16"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Variant_Fund",
+      "edge_type": "funded_by",
+      "id": "edge-17"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Andreessen_Horowitz",
+      "edge_type": "funded_by",
+      "id": "edge-18"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Kakarot",
+      "edge_type": "similar_project",
+      "id": "edge-19"
+    },
+    {
+      "source": "entity_捷豹路虎JLR",
+      "target": "fund_raising_event_1182",
+      "edge_type": "invested_in",
+      "id": "edge-20"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_OKX_Ventures",
+      "edge_type": "funded_by",
+      "id": "edge-21"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Ingonyama",
+      "edge_type": "funded_by",
+      "id": "edge-22"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Dragonfly",
+      "edge_type": "funded_by",
+      "id": "edge-23"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Blockchain_Capital",
+      "edge_type": "funded_by",
+      "id": "edge-24"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Inco_Network",
+      "edge_type": "funded_by",
+      "id": "edge-25"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Vassilis_Tziokas",
+      "edge_type": "funded_by",
+      "id": "edge-26"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Alex_Gluchowski",
+      "edge_type": "funded_by",
+      "id": "edge-27"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Lightspeed_Venture",
+      "edge_type": "funded_by",
+      "id": "edge-28"
+    },
+    {
+      "source": "entity_北拓资本",
+      "target": "fund_raising_event_734",
+      "edge_type": "invested_in",
+      "id": "edge-29"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_1kx",
+      "edge_type": "funded_by",
+      "id": "edge-30"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Marco_Cora",
+      "edge_type": "funded_by",
+      "id": "edge-31"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Clave",
+      "edge_type": "funded_by",
+      "id": "edge-32"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Blockchaincom",
+      "edge_type": "funded_by",
+      "id": "edge-33"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_IOSG_Ventures",
+      "edge_type": "funded_by",
+      "id": "edge-34"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Hashed",
+      "edge_type": "funded_by",
+      "id": "edge-35"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_eGirl_Capital",
+      "edge_type": "funded_by",
+      "id": "edge-36"
+    },
+    {
+      "source": "entity_建元基金",
+      "target": "fund_raising_event_941",
+      "edge_type": "invested_in",
+      "id": "edge-37"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_TRALA",
+      "edge_type": "funded_by",
+      "id": "edge-38"
+    },
+    {
+      "source": "entity_深创投",
+      "target": "fund_raising_event_922",
+      "edge_type": "invested_in",
+      "id": "edge-39"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Michael_Lee",
+      "edge_type": "funded_by",
+      "id": "edge-40"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_USV",
+      "edge_type": "funded_by",
+      "id": "edge-41"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Nana_Murugesan",
+      "edge_type": "funded_by",
+      "id": "edge-42"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Coinbase_Ventures",
+      "edge_type": "funded_by",
+      "id": "edge-43"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_Mirana_Ventures",
+      "edge_type": "funded_by",
+      "id": "edge-44"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "ecology_Ethereum",
+      "edge_type": "belong_to",
+      "id": "edge-45"
+    },
+    {
+      "source": "entity_大湾区共同家园发展基金",
+      "target": "fund_raising_event_893",
+      "edge_type": "invested_in",
+      "id": "edge-46"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "project_tag_Layer2",
+      "edge_type": "tagged_with",
+      "id": "edge-47"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "project_tag_zk",
+      "edge_type": "tagged_with",
+      "id": "edge-48"
+    },
+    {
+      "source": "entity_zkSync_ZK",
+      "target": "entity_GRVT",
+      "edge_type": "funded_by",
+      "id": "edge-49"
+    }
+  ]
+}

@@ -5,21 +5,14 @@ import axios from 'axios';
 import { Context } from '../../context/Context'
 import { EdgeEvent, Graph, NodeEvent } from '@antv/g6';
 import { findShortestPath,getDegree } from '@antv/algorithm';
-// import G6 from '@antv/g6';
-// import { degree } from '@antv/algorithm'
-// import { findShortestPath } from '@antv/algorithm';
-import './KGraph.css';
-import data from './nodeData.json'
-// import data from './output.json'
-import data2 from './nodeData2.json'
-import outputdata from './graph_example.json'
-// import outputdata from './output.json'
-import RangeSlider from '../RangeSlider/RangeSlider';
+import './KGraphTest.css';
+import timedata from './graph_time_data.json'
 
 
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
 
 let graph; // 全局图变量
+let edgeDrawed = []; // 全局变量，记录已经绘制的边
 
 // #FFB6C1
 // #E0EDF9
@@ -40,50 +33,24 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
   const [loading, setLoading] = useState(true); // 加载中
 
   // 获取图数据
-  const fetchGraphData =  async () => {
-    console.log('fetchGraphData');
-    
+  const fetchGraphData =   () => {
     try {
-      /****************调取后端********************/
-      // const response = await axios.post('http://localhost:8081/ngql/getNodesAndEdgesByNGQL', {
-      //   query: 'match (v1)-[e]->(v2) return id(v1), e, v2 limit 50',
-      // });
-      // const data = response.data.data;
+      /****************假数据********************/
+      const data = timedata;
 
-      // // 转换数据为 Graph 需要的格式
-      // const transformedData = {
-      //   nodes: data.nodes.map((node) => ({
-      //     id: node.id,
-      //     data: { cluster: node.type },
-      //   })),
-      //   edges: data.edges.map((edge) => ({
-      //     source: edge.source,
-      //     target: edge.target,
-      //     edge_type: edge.type,
-      //   })),
-      // };
+      const processedData = {
+        nodes: JSON.parse(JSON.stringify(data.nodes)),
+      };
+
+      const transformedData = processedData;
+
       // transformedData.nodes.forEach((node) => {
       //   node.size = Math.random() * 20 + 6;
       // });
-
-      /****************假数据********************/
-      const data = outputdata;
-      const transformedData = data;
-      transformedData.nodes.forEach((node) => {
-        node.size = Math.random() * 20 + 6;
-      });
-
-      // 给每一条边加一个ID
-      // transformedData.edges = data.edges.map((edge, index) => ({
-      //   ...edge,
-      //   id: `edge-${index}`, // 生成唯一 id，例如 edge-0, edge-1
-      // }));
-      // console.log('假数据在此！',transformedData);
-      
       /****************假数据********************/
 
       // 更新图数据状态
-      setGraphData(transformedData); 
+      setGraphData(processedData); 
       console.log('图例graphdata = ',graphData);
     } catch (error) {
       console.error('加载图数据失败:', error);
@@ -96,9 +63,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
       animation: false,
       width: 700, // 初始宽度
       height: 700, // 初始高度
-      // width: 500, // 初始宽度
-      // height: 500, // 初始高度
-      // autoResize: true,
       data: data,
       node: {
         // type: 'rect',
@@ -127,14 +91,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
             
           }
         },
-        // palette: {
-        //   type: 'group',
-        //   field: 'cluster',
-        //   color: (d)=>{
-        //     console.log(d.id);
-            
-        //   }
-        // },
       },
       edge: {
         style: {
@@ -148,7 +104,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
         nodeClusterBy: 'cluster',
         clusterNodeStrength: 70,
         collide: {
-          // Prevent nodes from overlapping by specifying a collision radius for each node.
           radius: (d) => d.size / 2,
         },
       },
@@ -180,68 +135,9 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
             });
             return result;
           },
-        },
-        
-        // 图例
-        // {
-        //   type: 'legend',
-        //   nodeField: 'cluster',
-        //   // edgeField: 'edge_type',
-        //   titleText: 'Nodes Type',
-        //   trigger: 'click',
-        //   position: 'top',
-        //   // container: hoverBox.current,
-        //   gridCol: 3,
-        //   itemLabelFontSize: 12,
-        // }
+        }
       ]
     });
-
-    /****************************HOVER************************************ */
-    graph.on(NodeEvent.POINTER_ENTER, (event) => {
-      // const { target } = event;
-      // graph.updateNodeData([
-      //   { id: target.id, style: { fill: 'lightgreen', labelFill: 'lightgreen' } },
-      // ]);
-      // graph.draw();
-    });
-
-    graph.on(EdgeEvent.POINTER_ENTER, (event) => {
-    });
-    
-    graph.on(NodeEvent.POINTER_OUT, (event) => {
-    });
-    
-    graph.on(EdgeEvent.POINTER_OUT, (event) => {
-    });
-
-    // 动态调整节点大小
-    // data.nodes.forEach((node) => {
-    //   const degree = graph.getNodeDegree(node.id); // 获取节点的总度
-    //   node.size = 20 + degree * 10; // 根据度动态调整大小，最小为20，增加与度成正比
-    // });
-    // 动态调整节点大小
-    // console.log('degree == ',degree);
-    
-    // data.nodes.forEach((node) => {
-    //   log
-    //   const degree = graph.degree(node.id); // 获取节点的总度
-    //   node.size = 20 + degree * 10; // 根据度动态调整大小，最小为20，增加与度成正比
-    // });
-
-    // 加载数据
-    // graph.data(data);
-    // setTimeout(()=>{
-    //   console.log('getNodeData == ',graph.getNodeData());
-    //   console.log(' getInDegree() == ' ,getInDegree(data, '32'));
-    //   // console.log();
-      
-    //   // graph.setNode({id: '7',style:{fill: 'black'}}) // 所有一起设置，但很慢
-    //   // graph.updateNodeData([{ id: '1', style: { fill: 'black' } }]) // 不生效啊
-    // },3000)
-
-    console.log('?????');
-    
 
     try{
       graph.render();
@@ -311,10 +207,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
   }
 
   const handle2 = () => {
-    // console.log(graph.getData());
-    // console.log(graph.getPlugins()); //获取该图的插件
-    // console.log(graph.getElementDataByState('node', 'selected')); // 
-    // graph.setElementState('entity_Monad','selected')
     console.log(graph.getElementState('entity_Monad'));
     
     // graph.clear()
@@ -325,14 +217,6 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     console.log(graph.getNodeData());
     // graph.render()
   }
-  // setTimeout(()=>{
-  //   graph.addEdgeData([{ source: '15', target: '17' }])
-  //   graph.draw()
-  // },1000)
-  // setTimeout(()=>{
-  //   graph.addEdgeData([{ source: '8', target: '17' }])
-  //   graph.draw()
-  // },2000)
   const handleClick = (selectedCluster) => {
     graphData.nodes.forEach((node) => {
       graph.setElementState(node.id, [])
@@ -438,37 +322,87 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     // getDegree返回所有结点的度数
     console.log('所有节点的度数',getDegree(graphData)); 
     console.log('所有节点的度数',Object.keys(getDegree(graphData)).length); 
+    graph.removeEdgeData(['edge-1','edge-2'])
+    graph.draw()
   }
 
-  // 时间范围
-  const [start, setStart] = useState(100);
-  const [end, setEnd] = useState(300);
+  /**************************** range ****************************/
+  const [rangeValue, setRangeValue] = React.useState([0, 1]);
+  const [rangeMax , setRangeMax] = React.useState(6);
+  const onRangeChange = (value) => {
+    if (Number.isNaN(value)) {
+      return;
+    }
+    console.log('范围变化',value);
+    
+    setRangeValue(value);
+  };
+  const onRangeChangeComplete = (value) => {
+    console.log('范围完成：',value);
+    // updateKGraph()
+    const newGraphData = filterData(value);
+    const {addedEdges,removedEdges} = newGraphData
+    console.log('过滤边',addedEdges,removedEdges)
+    const removedEdgeIds = removedEdges.map((edge) => edge.id);
+    graph.addEdgeData(addedEdges)
+    graph.removeEdgeData(removedEdgeIds)
+    graph.draw()
+    console.log(graphData);
+  }
 
-  const handleRangeChange = (newStart, newEnd) => {
-    setStart(newStart);
-    setEnd(newEnd);
+  // 改变渲染函数
+  const updateKGraph = () => {
+    graph.addEdgeData([{ source: '1', target: '2' }])
+    graph.draw();
+  }
+
+  const filterData = (range) => {
+    const [min, max] = range;
+
+    // 1. 过滤节点
+    const filteredNodes = timedata.nodes.filter(
+      (node) => node.time_step >= min && node.time_step <= max
+    );
+
+    // 2. 提取过滤后节点的 id
+    const nodeIds = filteredNodes.map((node) => node.id);
+
+   // 3. 过滤边
+    const filteredEdges = timedata.edges.filter(
+      (edge) => nodeIds.includes(edge.source) && nodeIds.includes(edge.target)
+    );
+
+    // 4. 找出新增的边
+    const addedEdges = filteredEdges.filter(
+      (edge) => !edgeDrawed.some((e) => e.source === edge.source && e.target === edge.target)
+    );
+
+    // 5. 找出需要删除的边
+    const removedEdges = edgeDrawed.filter(
+      (edge) => !filteredEdges.some((e) => e.source === edge.source && e.target === edge.target)
+    );
+
+    // 6. 更新 edgeDrawed
+    edgeDrawed = filteredEdges;
+
+    // 返回节点、新增的边和需要删除的边
+    return { nodes: filteredNodes, addedEdges, removedEdges };
   };
   return (
     <div className="graph">
     <Spin tip="Loading" spinning={loading} style={{marginTop: '300px'}}>
       <Button onClick={handleFindShortestPath}>最短路径</Button>
       <Button onClick={downloadJson}>下载JSON数据</Button>
-      {/* <Button onClick={testG6}>测试G6按钮</Button> */}
+      <Button onClick={testG6}>测试G6按钮</Button>
       {/* 图例 */}
        <div className="hoverBox" ref={hoverBox}>
         <div className="legendTitle">
           Node Types
         </div>
-        {/* <div className="legend">
-          {Object.entries(TypeColors).map(([type, color]) => (
-            <div className="legend-item" key={type} onClick={() => handleClick(type)}>
-              <span className="color-circle" style={{ backgroundColor: color }}></span>
-              <span>{type.replace(/_/g, " ")}</span>
-            </div>
-          ))}
-        </div> */}
-        {/* <div className="legend">
-          {nodeCategories.map((category) => (
+        
+        <div className="legend">
+        {nodeCategories.length > 0 ? (
+          nodeCategories.map((category) => (
             <div
               key={category}
               className="legend-item"
@@ -478,29 +412,13 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
                 className="color-circle"
                 style={{ backgroundColor: TypeColors[category] }}
               ></span>
-              <span>{category.replace(/_/g, ' ')}</span>
+              <span>{category.replace(/_/g, " ")}</span>
             </div>
-          ))}
-        </div> */}
-        <div className="legend">
-    {nodeCategories.length > 0 ? (
-      nodeCategories.map((category) => (
-        <div
-          key={category}
-          className="legend-item"
-          onClick={() => handleClick(category)}
-        >
-          <span
-            className="color-circle"
-            style={{ backgroundColor: TypeColors[category] }}
-          ></span>
-          <span>{category.replace(/_/g, " ")}</span>
-        </div>
-      ))
-    ) : (
-      <p>加载中...</p>
-    )}
-  </div>
+          ))
+        ) : (
+          <p>加载中...</p>
+        )}
+      </div>
       </div>
       {/* 搜索 */}
       <div className={`search ${isActive ? "active" : ""}`}>
@@ -540,50 +458,16 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
         )}
       </div>
       {/* 时间 */}
-      {/* <div className="MyRangeSlider">
+      <div className="MyRangeSlider">
         <span>时间戳</span>
-        <Slider range={{ draggableTrack: true }} defaultValue={[2, 5]} max={11}></Slider>
-      </div> */}
-      {/* <Input></Input> */}
-      {/* <div className="inputContainer">
-      <input
-        type="text"
-        value={content} // 与状态绑定
-        onFocus={handleFocus} // 聚焦事件
-        onBlur={handleBlur} // 失焦事件
-        onChange={handleInputChange} // 输入框内容变化
-        placeholder="请输入内容"
-        style={{
-          width: "100%",
-          padding: "10px",
-          fontSize: "16px",
-          border: "1px solid #ccc",
-          borderRadius: "4px",
-        }}
-      />
-      <Popover
-        content={
-          <Editor
-            width="300px"
-            height="300px"
-            defaultLanguage="sql"
-            value={content} // 与状态绑定
-            onChange={handleEditorChange} // 编辑器输入时更新状态
-            options={{
-              automaticLayout: true,
-              minimap: { enabled: false },
-            }}
-          />
-        }
-        placement="bottom"
-        trigger="click" // 让 Popover 在聚焦时显示
-        open={isPopoverVisible} // 控制显示状态
-      ></Popover>
-      </div> */}
-      {/* <Editor defaultLanguage="sql" defaultValue="// 请输入Nebulagraph图数据库语言" />; */}
-      {/* <button onClick={handle}>testtest</button>
-      <button onClick={handle2}>子图</button>
-      <button onClick={handle3}>子图</button> */}
+        <Slider 
+          range={{ draggableTrack: true }} 
+          value={rangeValue}
+          max={rangeMax}
+          onChange={onRangeChange}
+          onChangeComplete={onRangeChangeComplete}
+        ></Slider>
+      </div>
       <div id="web3graph" ref={containerRef}></div>
     </Spin>
 

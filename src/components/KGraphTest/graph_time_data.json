@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 1
+    },
+    {
+      "id": "1",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 1
+    },
+    {
+      "id": "2",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 2
+    },
+    {
+      "id": "3",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 2
+    },
+    {
+      "id": "4",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 3
+    },
+    {
+      "id": "5",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 3
+    },
+    {
+      "id": "6",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 4
+    },
+    {
+      "id": "7",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 4
+    },
+    {
+      "id": "8",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 5
+    },
+    {
+      "id": "9",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 5
+    },
+    {
+      "id": "10",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 6
+    },
+    {
+      "id": "11",
+      "data": {
+        "cluster": "entity"
+      },
+      "time_step": 6
+    }
+  ],
+  "edges": [
+    { "id": "edge-1",
+      "source": "0",
+      "target": "1",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-2",
+      "source": "1",
+      "target": "2",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-3",
+      "source": "2",
+      "target": "3",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-4",
+      "source": "3",
+      "target": "4",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-5",
+      "source": "4",
+      "target": "5",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-6",
+      "source": "5",
+      "target": "6",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-7",
+      "source": "6",
+      "target": "7",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-8",
+      "source": "7",
+      "target": "8",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-9",
+      "source": "8",
+      "target": "9",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-10",
+      "source": "9",
+      "target": "10",
+      "edge_type": "funded_by"
+    }
+  ]
+}

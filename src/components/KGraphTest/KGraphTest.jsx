@@ -8,7 +8,7 @@ import { findShortestPath,getDegree } from '@antv/algorithm';
 import './KGraphTest.css';
 import timedata from './cross_chain_data.json'
 // import timedata from './graph_time_data.json'
-
+import TimeSeriesChart from "./TimeSeriesChart";
 
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
 
@@ -25,8 +25,8 @@ const TypeColors = {
   news: "#2D467B",
   // chain: "#ec9bad",
   // transaction: "#1661ab"
-  chain: "#FFB6C1",
-  transaction: "#a7a8bd"
+  Chain: "#FFB6C1",
+  Transaction: "#a7a8bd"
 };
 
 const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
@@ -56,7 +56,7 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
 
       // 更新图数据状态
       setGraphData(processedData); 
-      console.log('图例graphdata = ',graphData);
+      // console.log('图例graphdata = ',graphData);
     } catch (error) {
       console.error('加载图数据失败:', error);
     }
@@ -67,7 +67,7 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
       container: containerRef.current,
       animation: false,
       width: 700, // 初始宽度
-      height: 700, // 初始高度
+      height: 400, // 初始高度
       data: data,
       node: {
         // type: 'rect',
@@ -76,7 +76,7 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
           // size: (d) => d.size?d.size:10,
           size: (d) => {
             if(d.data.cluster === 'Transaction') {
-              return 20
+              return 30
             } else if(d.data.cluster === 'Chain') {
               return 40
             } else {
@@ -107,9 +107,9 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
             } else if(d.data.cluster === 'news') {
               return TypeColors.news
             } else if(d.data.cluster === 'Transaction') {
-              return TypeColors.chain
+              return TypeColors.Chain
             } else if(d.data.cluster === 'Chain') {
-              return TypeColors.transaction
+              return TypeColors.Transaction
             }
             
           }
@@ -202,13 +202,13 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     const resizeGraph = () => {
       if (!graph) return; // 确保 graph 已被初始化
       if (isMainCollapsed && isSidebarCollapsed) {
-        graph.resize(1300, 800);
+        graph.resize(1300, 400);
       } else if (!isMainCollapsed && isSidebarCollapsed) {
-        graph.resize(1200, 800);
+        graph.resize(1200, 400);
       } else if (isMainCollapsed && !isSidebarCollapsed) {
-        graph.resize(1200, 800);
+        graph.resize(1200, 400);
       } else {
-        graph.resize(650, 800);
+        graph.resize(650, 400);
       }
       graph.render();
     };
@@ -487,7 +487,29 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
           };
         });
         
-        console.log(resultArray);
+        console.log('图数据库 节点 = ',resultArray);
+        const result = resultArray
+          .filter(item => item.data.cluster === "Transaction") // 筛选出 cluster 为 Transaction 的对象
+          .map(item => ({
+            time_step: Math.floor(item.time_step / 1000), // 提取时间
+              amount: item.data.amount  // 提取金额
+          }));
+
+        // 使用 reduce 合并相同的 time_step
+        const mergedResult = result.reduce((acc, item) => {
+          const existingItem = acc.find(entry => entry.time_step === item.time_step);
+          if (existingItem) {
+              // 如果 time_step 已存在，累加 amount
+              existingItem.amount += item.amount;
+          } else {
+              // 如果 time_step 不存在，添加新条目
+              acc.push({ time_step: item.time_step, amount: item.amount });
+          }
+          return acc;
+        }, []);
+
+        // console.log(mergedResult);
+        console.log('图数据库 列表 = ',mergedResult);
 
         // const json = JSON.stringify(resultArray, null, 2); // 格式化 JSON 数据
         // const blob = new Blob([json], { type: 'application/json' }); // 创建 Blob 对象
@@ -644,6 +666,9 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
         ></Slider>
       </div>
       <div id="web3graph" ref={containerRef}></div>
+      <div>
+        <TimeSeriesChart/>
+      </div>
     </Spin>
 
     </div>

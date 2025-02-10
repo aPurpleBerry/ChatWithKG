@@ -12,6 +12,11 @@ export default defineConfig({
         target: 'http://192.168.1.57:4000/query_graphrag',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/graphrag/, '')
+      },
+      '/nebula': {
+        target: 'http://0.0.0.0:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/nebula/, '')
       }
     }
   },

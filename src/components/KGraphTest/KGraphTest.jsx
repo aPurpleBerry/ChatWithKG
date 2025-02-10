@@ -6,7 +6,8 @@ import { Context } from '../../context/Context'
 import { EdgeEvent, Graph, NodeEvent } from '@antv/g6';
 import { findShortestPath,getDegree } from '@antv/algorithm';
 import './KGraphTest.css';
-import timedata from './graph_time_data.json'
+import timedata from './cross_chain_data.json'
+// import timedata from './graph_time_data.json'
 
 
 import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
@@ -21,7 +22,11 @@ const TypeColors = {
   fund_raising_event: "#A2CBEE",
   ecology: "#5591DC",
   project_tag: "#3763BE",
-  news: "#2D467B"
+  news: "#2D467B",
+  // chain: "#ec9bad",
+  // transaction: "#1661ab"
+  chain: "#FFB6C1",
+  transaction: "#a7a8bd"
 };
 
 const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
@@ -40,10 +45,10 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
 
       const processedData = {
         nodes: JSON.parse(JSON.stringify(data.nodes)),
+        edges: JSON.parse(JSON.stringify(data.edges)),
       };
 
-      const transformedData = processedData;
-
+      // const transformedData = processedData;
       // transformedData.nodes.forEach((node) => {
       //   node.size = Math.random() * 20 + 6;
       // });
@@ -68,9 +73,23 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
         // type: 'rect',
         style: {
           radius: 4,
-          size: (d) => d.size?d.size:10,
+          // size: (d) => d.size?d.size:10,
+          size: (d) => {
+            if(d.data.cluster === 'Transaction') {
+              return 20
+            } else if(d.data.cluster === 'Chain') {
+              return 40
+            } else {
+              return 10
+            }
+          },
           ports: [],
-          labelText: (d) => d.id,
+          // labelText: (d) => d.id,
+          labelText: (d) => {
+            if(d.data.cluster === 'Chain') {
+              return d.id;
+            }
+          },
           labelBackground: true,
           labelBackgroundFill: '#E0EDF9',
           labelBackgroundRadius: 4,
@@ -87,6 +106,10 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
               return TypeColors.project_tag
             } else if(d.data.cluster === 'news') {
               return TypeColors.news
+            } else if(d.data.cluster === 'Transaction') {
+              return TypeColors.chain
+            } else if(d.data.cluster === 'Chain') {
+              return TypeColors.transaction
             }
             
           }
@@ -318,12 +341,42 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     URL.revokeObjectURL(url);
   };
   
-  const testG6 = () => {
-    // getDegree返回所有结点的度数
-    console.log('所有节点的度数',getDegree(graphData)); 
-    console.log('所有节点的度数',Object.keys(getDegree(graphData)).length); 
-    graph.removeEdgeData(['edge-1','edge-2'])
+  // 动态更新节点度数
+  const UpdateSizeByDegree = () => {
+    const allNodeDegree = getDegree(graph.getData())
+    console.log('allNodeDegree == ',allNodeDegree);
+    
+    const sortedAllNodeDegree = Object.fromEntries(
+      Object.entries(allNodeDegree).sort(([, a], [, b]) => b.degree - a.degree)
+    );
+    console.log('sortedAllNodeDegree == ', typeof sortedAllNodeDegree);
+
+    const transformedArray = Object.entries(sortedAllNodeDegree).map(([key, value]) => ({
+      id: key,
+      size: value.degree*10,
+    }));
+    console.log('transformedArray ===', transformedArray);
+    graph.updateNodeData(transformedArray)
     graph.draw()
+
+  }
+  const testG6 = () => {
+    
+    UpdateSizeByDegree()
+
+    
+    // for(let obj in sortedAllNodeDegree) {
+    //   console.log(obj);
+    //   console.log(sortedAllNodeDegree[obj]);
+      
+    // }
+    
+
+    // getDegree返回所有结点的度数
+    // console.log('所有节点的度数',getDegree(timedata)); 
+    // console.log('所有节点的度数',Object.keys(getDegree(graphData)).length); 
+    // graph.removeEdgeData(['edge-1','edge-2'])
+    // graph.draw()
   }
 
   /**************************** range ****************************/
@@ -346,8 +399,10 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     const removedEdgeIds = removedEdges.map((edge) => edge.id);
     graph.addEdgeData(addedEdges)
     graph.removeEdgeData(removedEdgeIds)
+    // const allNodesDegree = getDegree(graph.getData());
     graph.draw()
     console.log(graphData);
+    UpdateSizeByDegree()
   }
 
   // 改变渲染函数
@@ -388,12 +443,132 @@ const KGraph = ({ isSidebarCollapsed, isMainCollapsed }) => {
     // 返回节点、新增的边和需要删除的边
     return { nodes: filteredNodes, addedEdges, removedEdges };
   };
-  return (
+
+  const testNebula = ()=> {
+    let inputArray;
+    axios
+      .get("/nebula/queryAllNodes")
+      .then((response) => {
+        // console.log("返回数据：", response);
+        // console.log("返回数据2222：", response.data.data);
+        inputArray = response.data.data;
+        console.log(inputArray);
+
+        const resultArray = inputArray.map(item => {
+          // 提取 id
+          const id = item.values?.find(v => v.field === 5)?.value || "000";
+      
+          // 提取 cluster
+          const cluster = item.values?.find(v => v.field === 12)?.value?.values?.[0]?.value || "entity";
+      
+          // 根据 cluster 的值设置 type
+          const type = cluster === "Transaction" ? "rect" : cluster === "Chain" ? "circle" : "unknown";
+      
+          // 提取 time_step
+          const time_step = item.values?.find(v => v.field === 9)?.value?.tags?.[0]?.props?.txtimestamp?.value || 1;
+      
+          // 提取 txhash, amount, denom, fee
+          const txhash = item.values?.find(v => v.field === 9)?.value?.tags?.[0]?.props?.txhash?.value || "";
+          const amount = item.values?.find(v => v.field === 9)?.value?.tags?.[0]?.props?.amount?.value || 0;
+          const denom = item.values?.find(v => v.field === 9)?.value?.tags?.[0]?.props?.denom?.value || "";
+          const fee = item.values?.find(v => v.field === 9)?.value?.tags?.[0]?.props?.fee?.value || 0.0;
+      
+          return {
+              id: id,
+              type: type, // 动态添加 type 字段
+              data: {
+                  cluster: cluster,
+                  txhash: txhash,
+                  amount: amount,
+                  denom: denom,
+                  fee: fee
+              },
+              time_step: time_step
+          };
+        });
+        
+        console.log(resultArray);
+
+        // const json = JSON.stringify(resultArray, null, 2); // 格式化 JSON 数据
+        // const blob = new Blob([json], { type: 'application/json' }); // 创建 Blob 对象
+        // const url = URL.createObjectURL(blob); // 创建 URL 对象
+
+        // // 创建下载链接
+        // const link = document.createElement('a');
+        // link.href = url;
+        // link.download = 'output.json'; // 指定文件名
+        // link.click();
+
+        // // 清理 URL 对象
+        // URL.revokeObjectURL(url);
+        
+      })
+      .catch((error) => console.error("请求出错：", error));
+
+    let edgesArray;
+    let edgeCounter = 1;
+    axios
+      .get("/nebula/queryAllEdges")
+      .then((response) => {
+        edgesArray = response.data.data
+        console.log('=================',edgesArray);
+
+        const transformedArray = edgesArray.flatMap(item => 
+          item.values.map(valueItem => {
+            // console.log(valueItem,'==');
+            
+              const src = valueItem.value.src.value;              
+              const dst = valueItem.value.dst.value;
+              const edgeType = valueItem.value.name;
+              let address;
+              if(edgeType === 'SENDS') {
+                address = valueItem.value.props.sender_address.value;
+              } else {
+                address = valueItem.value.props.recipient_address.value;
+              }
+              
+
+              // console.log(src);
+              // console.log(dst);
+              // console.log(edgeType);
+              // console.log(address);
+              
+              return {
+                  id: `edge-${edgeCounter++}`,
+                  source: src,
+                  target: dst,
+                  edge_type: edgeType,
+                  address: address
+              };
+          })
+        );
+        console.log('转换后的数组 = ',transformedArray);
+        // const json = JSON.stringify(transformedArray, null, 2); // 格式化 JSON 数据
+        // const blob = new Blob([json], { type: 'application/json' }); // 创建 Blob 对象
+        // const url = URL.createObjectURL(blob); // 创建 URL 对象
+
+        // // 创建下载链接
+        // const link = document.createElement('a');
+        // link.href = url;
+        // link.download = 'output.json'; // 指定文件名
+        // link.click();
+
+        // // 清理 URL 对象
+        // URL.revokeObjectURL(url);
+        
+      }).catch((error) => {
+        console.log(error); 
+      })
+    
+      
+  }
+  return ( 
     <div className="graph">
     <Spin tip="Loading" spinning={loading} style={{marginTop: '300px'}}>
       <Button onClick={handleFindShortestPath}>最短路径</Button>
       <Button onClick={downloadJson}>下载JSON数据</Button>
-      <Button onClick={testG6}>测试G6按钮</Button>
+      {/* <Button onClick={testG6}>测试G6按钮</Button> */}
+      <Button onClick={testNebula}>测试Nebula</Button>
       {/* 图例 */}
        <div className="hoverBox" ref={hoverBox}>
         <div className="legendTitle">

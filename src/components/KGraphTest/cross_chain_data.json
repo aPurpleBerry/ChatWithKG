@@ -1,0 +1,958 @@
+{
+  "nodes": [
+    {
+      "id": "aaa7b2e89dfcbdfa7525193260bdeb94",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "AD675E2385649446E14D19A068B49DD27CAD43EC6D8C402CE774052C64B58FEB",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736154262000
+    },
+    {
+      "id": "ethereum-sepolia",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "polygon-sepolia",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "osmosis",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "osmosis-7",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "a860f38679281b056d036e2afeb7e8bd",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "B653BD3448FC2B7E2C7C3ACD3CF5DB49E2EC0F38C4D1A89246BF28FBD20F8379",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1735990986000
+    },
+    {
+      "id": "eac3fb5172fbbbf2e6037a8653bc18d2",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "8301534F257F01368C0B8FE3754E541F624ABBA0F8A954EF8D66E5A35DEAF37A",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1738063677000
+    },
+    {
+      "id": "e4d4a643d3d89cb86b183a22d6ea206c",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "467D227E8EC70479520E89D165635C658C4140C7AD7D8FAC6239AD831E0B1F8E",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736096716000
+    },
+    {
+      "id": "395ff16e562e5508fade39cbea0baae5",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "E732A7667A61DDA1ED17325958EEED1F092C7633A2267E9E57D536B69635E630",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737434916000
+    },
+    {
+      "id": "704467adcb36f755bbbb420f6baab38b",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "EC9C0D1687EC0C5E9DAC906389675069A2FF76E279D90E8F7408776DC68E3B71",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737625174000
+    },
+    {
+      "id": "5d9cae89d2ca868fb853137516549191",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "4C64EDF888CD96797024E90E42785F34F17F01EEFB3AF8CE9ED8E891FB6F681D",
+        "amount": 0.3,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1738235022000
+    },
+    {
+      "id": "6e452679267f21f05616e43d8db98526",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x6f4f61dc41ed2736d885300ba89293dd5d197a156a258eb2aa0eeba8e834fade",
+        "amount": 1.2,
+        "denom": "uausdc",
+        "fee": 0.2
+      },
+      "time_step": 1738315240000
+    },
+    {
+      "id": "b8f486e01c87dea99afcefffd5316885",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "9C2D760BBB76F673FBCDDFD144B8EA10F96B4E870BC8B8CB25144F688BB4CCDC",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737353587000
+    },
+    {
+      "id": "c38adcf187143a80e6cf4ae7ba144dc3",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "34B996B617E75EEF7229619C2870FAEC020091C43469A599B0DCAF116D4527ED",
+        "amount": 0.5,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1738239188000
+    },
+    {
+      "id": "fc50b3e944a400eefc6eacbe7ccb6298",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "50CEA9200561CBBF9B919743E5E6E5D5F447938CDC1A2E13A6565E919CA8EB6B",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737467513000
+    },
+    {
+      "id": "24170a8bf0ea61329eeab2a83bf90dfb",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x1d467ad5c6ba31b16a2640347f72713d57ca35a588d17fd165d2beca2ae2fcd1",
+        "amount": 1.2,
+        "denom": "uausdc",
+        "fee": 0.2
+      },
+      "time_step": 1738314168000
+    },
+    {
+      "id": "7314df0a29ca44846f8d77b205d15cd1",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "B24304A10D9B3CDF74023ABC48FE06DB6F80F119CB248372156169ABC8D99874",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737407299000
+    },
+    {
+      "id": "7469a11c478e0321d9d97c4e01575668",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0xb5ad2f6483fe22566496e4d6a625ff7d782bc451bf1ae38e690040a1f5aaf450",
+        "amount": 0.2,
+        "denom": "sepolia-weth-wei",
+        "fee": 0
+      },
+      "time_step": 1738245168000
+    },
+    {
+      "id": "cbe6c54c909aab20d818b096fa22ac9e",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "1891334852B7D241469B8F3E93BF9E72E01713D19657444FC491BFB550F0D977",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1735839993000
+    },
+    {
+      "id": "78f0c3d56cef25026ca33190de9cf8cc",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "895202435E8BE255B7941FF2689716F571B009CB2A8BE33512BEF4EACCE91EFE",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736249821000
+    },
+    {
+      "id": "355631a20e37cab81b2471b79308947d",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "43E02748E83A114078E91C0D64CA53BCB61DF97EE85B4939AD555A82BBF042F1",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736015136000
+    },
+    {
+      "id": "base-sepolia",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "611d97076e97db9ca7297a11d6c7ef90",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "BBB93D46D2E69D1A6622303117F8E78ECB950E2A5F13D5A8ABF8D40AF7576B01",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736186103000
+    },
+    {
+      "id": "avalanche",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "c786d52ffe7305e284951c16a9e59680",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0xea776ea6268fd2f98db01a75caee11dd580e8ebfba5a39bfd382d198c76920ab",
+        "amount": 1.2,
+        "denom": "uausdc",
+        "fee": 0.2
+      },
+      "time_step": 1738316052000
+    },
+    {
+      "id": "50ed7a1ae1489ce4fcce92386f471842",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "1AA4D9AF7E6C2D23EF681D9EEA02FA8E31B74599D3B947999F9185F11E6F6910",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1735882045000
+    },
+    {
+      "id": "f74f8fc2d537e2b77a54535dc790fe16",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "8972407045E0FD4AF487324A44656F9D8BDC8E97DD32EA594A1BA472D57B6B80",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737541086000
+    },
+    {
+      "id": "87447a47add9407c11703edaef8ec304",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "BFF52DABB2C453950823E4CD2C2F1770A75402E75F894EE1518402A95FA519A6",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736826177000
+    },
+    {
+      "id": "9d3ab5817183e2d27907fcebc5d8b71e",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x11139191cd842430180414d474e2b20027832ff7ea4ecac0582cdf7222ec130d",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737540801000
+    },
+    {
+      "id": "osmo-test-5",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "binance",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "7a8d352d4dd54041121007029c359f1d",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0xb7951b0c0fc2971b7f15060fbb8c0c3a33f2bfdf209a4c1f50fc6b76bfba1f95",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737703769000
+    },
+    {
+      "id": "axelarnet",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "70f31601fe16796b76e000606958e5a7",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x6f6013ae6236c6e74774bc2ccbd6ab6fb995c1b61f87ae9d35805e96c1c2584d",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737647392000
+    },
+    {
+      "id": "de6a56b7e48b9d591dbd4b608da65ce9",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "29FB628D87714D49AA92964C66EB65DACDFDDB0C80CBE2AD74C2582F6DFCC86D",
+        "amount": 5,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1736492757000
+    },
+    {
+      "id": "b139d6a14360d81ea58116ae377fb1fe",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "7AECCB0D8CB10AB0F0853483FECDAEC017C359D0AAF90C0AD5F233DA8953A30D",
+        "amount": 0.01,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737617623000
+    },
+    {
+      "id": "fe16654d3baa47861371c5ac894b44a0",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "D4E03BFE2CC7F75214AA0D19EA2682014BE2AC9E687907F43F095B320FB719A4",
+        "amount": 0.5,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1738304026000
+    },
+    {
+      "id": "c1fab9cd635e34952e5264012b826433",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x9a3cda3babf2a9718a8f01fc04634cd3b4ab17aa9fafa9145d9effe340739455",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1737719520000
+    },
+    {
+      "id": "277ecb63f5960967f8b7700a24abbd39",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "0x7550e85382df27c6fe3a6c0015d5b2517915211bd13c81ffa87f02167309d088",
+        "amount": 2,
+        "denom": "uausdc",
+        "fee": 0.15
+      },
+      "time_step": 1738235856000
+    },
+    {
+      "id": "arbitrum-sepolia",
+      "type": "circle",
+      "data": {
+        "cluster": "Chain",
+        "txhash": "",
+        "amount": 0,
+        "denom": "",
+        "fee": 0
+      },
+      "time_step": 1
+    },
+    {
+      "id": "c21087719f7f3462df3f394ceaaa91e6",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "4614A6C803A1BC420744C417EF0935934CA7BB2BC0772C4BA16EBA475AB702B6",
+        "amount": 1,
+        "denom": "uausdc",
+        "fee": 0
+      },
+      "time_step": 1737539316000
+    },
+    {
+      "id": "de723017f7c2009c5a5ca3566f9763c9",
+      "type": "rect",
+      "data": {
+        "cluster": "Transaction",
+        "txhash": "D5625973949B0372A2867F8E97B7F3E5F4B1906A00B84F46DFA129FCB3196EE2",
+        "amount": 1,
+        "denom": "uaxl",
+        "fee": 0.1
+      },
+      "time_step": 1737556192000
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "source": "704467adcb36f755bbbb420f6baab38b",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1q3l6sex86se7vmfqeaqy5m3vqzz28e6msfezfz"
+    },
+    {
+      "id": "edge-2",
+      "source": "395ff16e562e5508fade39cbea0baae5",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-3",
+      "source": "6e452679267f21f05616e43d8db98526",
+      "target": "polygon-sepolia",
+      "edge_type": "SENDS",
+      "address": "0xe9c67E22e0fA40cD12B7119B4AA9f9E9Ef4dF57C"
+    },
+    {
+      "id": "edge-4",
+      "source": "5d9cae89d2ca868fb853137516549191",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1q3l6sex86se7vmfqeaqy5m3vqzz28e6msfezfz"
+    },
+    {
+      "id": "edge-5",
+      "source": "aaa7b2e89dfcbdfa7525193260bdeb94",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-6",
+      "source": "ethereum-sepolia",
+      "target": "50ed7a1ae1489ce4fcce92386f471842",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-7",
+      "source": "ethereum-sepolia",
+      "target": "611d97076e97db9ca7297a11d6c7ef90",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-8",
+      "source": "ethereum-sepolia",
+      "target": "78f0c3d56cef25026ca33190de9cf8cc",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-9",
+      "source": "ethereum-sepolia",
+      "target": "a860f38679281b056d036e2afeb7e8bd",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-10",
+      "source": "ethereum-sepolia",
+      "target": "aaa7b2e89dfcbdfa7525193260bdeb94",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-11",
+      "source": "ethereum-sepolia",
+      "target": "cbe6c54c909aab20d818b096fa22ac9e",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-12",
+      "source": "ethereum-sepolia",
+      "target": "fc50b3e944a400eefc6eacbe7ccb6298",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-13",
+      "source": "polygon-sepolia",
+      "target": "de6a56b7e48b9d591dbd4b608da65ce9",
+      "edge_type": "RECEIVES",
+      "address": "0x3b9b597add127eadf6d0d7cd20c3aaac4ee94a96"
+    },
+    {
+      "id": "edge-14",
+      "source": "e4d4a643d3d89cb86b183a22d6ea206c",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-15",
+      "source": "eac3fb5172fbbbf2e6037a8653bc18d2",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1q3l6sex86se7vmfqeaqy5m3vqzz28e6msfezfz"
+    },
+    {
+      "id": "edge-16",
+      "source": "a860f38679281b056d036e2afeb7e8bd",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-17",
+      "source": "osmosis-7",
+      "target": "277ecb63f5960967f8b7700a24abbd39",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-18",
+      "source": "osmosis-7",
+      "target": "70f31601fe16796b76e000606958e5a7",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-19",
+      "source": "osmosis-7",
+      "target": "9d3ab5817183e2d27907fcebc5d8b71e",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-20",
+      "source": "osmosis-7",
+      "target": "c1fab9cd635e34952e5264012b826433",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-21",
+      "source": "osmosis-7",
+      "target": "de723017f7c2009c5a5ca3566f9763c9",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-22",
+      "source": "b8f486e01c87dea99afcefffd5316885",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-23",
+      "source": "fe16654d3baa47861371c5ac894b44a0",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo152f20c0ld0v648tycp3w0e8lnet95mycvz0c0p"
+    },
+    {
+      "id": "edge-24",
+      "source": "de6a56b7e48b9d591dbd4b608da65ce9",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-25",
+      "source": "b139d6a14360d81ea58116ae377fb1fe",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1q3l6sex86se7vmfqeaqy5m3vqzz28e6msfezfz"
+    },
+    {
+      "id": "edge-26",
+      "source": "c21087719f7f3462df3f394ceaaa91e6",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo18u9zztzwfy9gk2lh628pft95nns3rcr6yygh64"
+    },
+    {
+      "id": "edge-27",
+      "source": "de723017f7c2009c5a5ca3566f9763c9",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1yh3ra8eage5xtr9a3m5utg6mx0pmqrey8fg9ap"
+    },
+    {
+      "id": "edge-28",
+      "source": "osmo-test-5",
+      "target": "7a8d352d4dd54041121007029c359f1d",
+      "edge_type": "RECEIVES",
+      "address": "osmo1n4j0cy98dac5q6d9y5nhlmk5d6e4wzve0sytdj"
+    },
+    {
+      "id": "edge-29",
+      "source": "binance",
+      "target": "24170a8bf0ea61329eeab2a83bf90dfb",
+      "edge_type": "RECEIVES",
+      "address": "0x062e8f8c1d1c22af716e49d59e67ea2502d2c090"
+    },
+    {
+      "id": "edge-30",
+      "source": "binance",
+      "target": "6e452679267f21f05616e43d8db98526",
+      "edge_type": "RECEIVES",
+      "address": "0x062e8f8c1d1c22af716e49d59e67ea2502d2c090"
+    },
+    {
+      "id": "edge-31",
+      "source": "binance",
+      "target": "7469a11c478e0321d9d97c4e01575668",
+      "edge_type": "RECEIVES",
+      "address": "0x062E8f8c1d1C22Af716E49d59e67EA2502d2c090"
+    },
+    {
+      "id": "edge-32",
+      "source": "binance",
+      "target": "c786d52ffe7305e284951c16a9e59680",
+      "edge_type": "RECEIVES",
+      "address": "0x062e8f8c1d1c22af716e49d59e67ea2502d2c090"
+    },
+    {
+      "id": "edge-33",
+      "source": "7a8d352d4dd54041121007029c359f1d",
+      "target": "avalanche",
+      "edge_type": "SENDS",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-34",
+      "source": "arbitrum-sepolia",
+      "target": "355631a20e37cab81b2471b79308947d",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-35",
+      "source": "arbitrum-sepolia",
+      "target": "87447a47add9407c11703edaef8ec304",
+      "edge_type": "RECEIVES",
+      "address": "0xee17d0a243361997245a0eba740e26020952f249"
+    },
+    {
+      "id": "edge-36",
+      "source": "arbitrum-sepolia",
+      "target": "e4d4a643d3d89cb86b183a22d6ea206c",
+      "edge_type": "RECEIVES",
+      "address": "0x264f9ef85c21de49451c3636116668889ca41aab"
+    },
+    {
+      "id": "edge-37",
+      "source": "277ecb63f5960967f8b7700a24abbd39",
+      "target": "avalanche",
+      "edge_type": "SENDS",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-38",
+      "source": "c1fab9cd635e34952e5264012b826433",
+      "target": "avalanche",
+      "edge_type": "SENDS",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-39",
+      "source": "70f31601fe16796b76e000606958e5a7",
+      "target": "avalanche",
+      "edge_type": "SENDS",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-40",
+      "source": "7469a11c478e0321d9d97c4e01575668",
+      "target": "ethereum-sepolia",
+      "edge_type": "SENDS",
+      "address": "0xe9c67E22e0fA40cD12B7119B4AA9f9E9Ef4dF57C"
+    },
+    {
+      "id": "edge-41",
+      "source": "7314df0a29ca44846f8d77b205d15cd1",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-42",
+      "source": "9d3ab5817183e2d27907fcebc5d8b71e",
+      "target": "avalanche",
+      "edge_type": "SENDS",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-43",
+      "source": "87447a47add9407c11703edaef8ec304",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-44",
+      "source": "fc50b3e944a400eefc6eacbe7ccb6298",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-45",
+      "source": "c38adcf187143a80e6cf4ae7ba144dc3",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo1q3l6sex86se7vmfqeaqy5m3vqzz28e6msfezfz"
+    },
+    {
+      "id": "edge-46",
+      "source": "50ed7a1ae1489ce4fcce92386f471842",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-47",
+      "source": "c786d52ffe7305e284951c16a9e59680",
+      "target": "ethereum-sepolia",
+      "edge_type": "SENDS",
+      "address": "0xe9c67E22e0fA40cD12B7119B4AA9f9E9Ef4dF57C"
+    },
+    {
+      "id": "edge-48",
+      "source": "f74f8fc2d537e2b77a54535dc790fe16",
+      "target": "osmosis",
+      "edge_type": "SENDS",
+      "address": "osmo18u9zztzwfy9gk2lh628pft95nns3rcr6yygh64"
+    },
+    {
+      "id": "edge-49",
+      "source": "24170a8bf0ea61329eeab2a83bf90dfb",
+      "target": "ethereum-sepolia",
+      "edge_type": "SENDS",
+      "address": "0xe9c67E22e0fA40cD12B7119B4AA9f9E9Ef4dF57C"
+    },
+    {
+      "id": "edge-50",
+      "source": "avalanche",
+      "target": "395ff16e562e5508fade39cbea0baae5",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-51",
+      "source": "avalanche",
+      "target": "5d9cae89d2ca868fb853137516549191",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-52",
+      "source": "avalanche",
+      "target": "704467adcb36f755bbbb420f6baab38b",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-53",
+      "source": "avalanche",
+      "target": "b139d6a14360d81ea58116ae377fb1fe",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-54",
+      "source": "avalanche",
+      "target": "c21087719f7f3462df3f394ceaaa91e6",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-55",
+      "source": "avalanche",
+      "target": "eac3fb5172fbbbf2e6037a8653bc18d2",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-56",
+      "source": "avalanche",
+      "target": "f74f8fc2d537e2b77a54535dc790fe16",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-57",
+      "source": "355631a20e37cab81b2471b79308947d",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-58",
+      "source": "base-sepolia",
+      "target": "7314df0a29ca44846f8d77b205d15cd1",
+      "edge_type": "RECEIVES",
+      "address": "0x8f7ccea764d889be32c675613773b00f18e490bf"
+    },
+    {
+      "id": "edge-59",
+      "source": "base-sepolia",
+      "target": "b8f486e01c87dea99afcefffd5316885",
+      "edge_type": "RECEIVES",
+      "address": "0x3f1235cc9a47b19ed99fe742077ddace324814cf"
+    },
+    {
+      "id": "edge-60",
+      "source": "base-sepolia",
+      "target": "c38adcf187143a80e6cf4ae7ba144dc3",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-61",
+      "source": "base-sepolia",
+      "target": "fe16654d3baa47861371c5ac894b44a0",
+      "edge_type": "RECEIVES",
+      "address": "0x20E68F6c276AC6E297aC46c84Ab260928276691D"
+    },
+    {
+      "id": "edge-62",
+      "source": "78f0c3d56cef25026ca33190de9cf8cc",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-63",
+      "source": "cbe6c54c909aab20d818b096fa22ac9e",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    },
+    {
+      "id": "edge-64",
+      "source": "611d97076e97db9ca7297a11d6c7ef90",
+      "target": "axelarnet",
+      "edge_type": "SENDS",
+      "address": "axelar1d4v2fad26kze27s9przdc6zrcyxqsj20vas39m"
+    }
+  ]
+}

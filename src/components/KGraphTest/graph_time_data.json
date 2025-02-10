@@ -1,84 +1,89 @@
 {
   "nodes": [
     {
-      "id": "0",
+      "id": "000",
       "data": {
-        "cluster": "entity"
+        "cluster": "entity",
+        "txhash": "",
+        "amount": 1,
+        "denom": "11",
+        "fee": 12.2
       },
       "time_step": 1
     },
     {
-      "id": "1",
+      "id": "001",
       "data": {
-        "cluster": "entity"
+        "cluster": "entity",
+        "haha": 2
       },
       "time_step": 1
     },
     {
-      "id": "2",
+      "id": "002",
       "data": {
         "cluster": "entity"
       },
       "time_step": 2
     },
     {
-      "id": "3",
+      "id": "003",
       "data": {
         "cluster": "entity"
       },
       "time_step": 2
     },
     {
-      "id": "4",
+      "id": "004",
       "data": {
         "cluster": "entity"
       },
       "time_step": 3
     },
     {
-      "id": "5",
+      "id": "005",
       "data": {
         "cluster": "entity"
       },
       "time_step": 3
     },
     {
-      "id": "6",
+      "id": "006",
       "data": {
         "cluster": "entity"
       },
       "time_step": 4
     },
     {
-      "id": "7",
+      "id": "007",
       "data": {
         "cluster": "entity"
       },
       "time_step": 4
     },
     {
-      "id": "8",
+      "id": "008",
       "data": {
         "cluster": "entity"
       },
       "time_step": 5
     },
     {
-      "id": "9",
+      "id": "009",
       "data": {
         "cluster": "entity"
       },
       "time_step": 5
     },
     {
-      "id": "10",
+      "id": "010",
       "data": {
         "cluster": "entity"
       },
       "time_step": 6
     },
     {
-      "id": "11",
+      "id": "011",
       "data": {
         "cluster": "entity"
       },
@@ -87,62 +92,75 @@
   ],
   "edges": [
     { "id": "edge-1",
-      "source": "0",
-      "target": "1",
-      "edge_type": "funded_by"
+      "source": "000",
+      "target": "001",
+      "edge_type": "funded_by",
+      "sender_address": "sss"
     },
     {
       "id": "edge-2",
-      "source": "1",
-      "target": "2",
+      "source": "001",
+      "target": "002",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-3",
-      "source": "2",
-      "target": "3",
+      "source": "002",
+      "target": "003",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-4",
-      "source": "3",
-      "target": "4",
+      "source": "003",
+      "target": "004",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-5",
-      "source": "4",
-      "target": "5",
+      "source": "004",
+      "target": "005",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-6",
-      "source": "5",
-      "target": "6",
+      "source": "005",
+      "target": "006",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-7",
-      "source": "6",
-      "target": "7",
+      "source": "006",
+      "target": "007",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-8",
-      "source": "7",
-      "target": "8",
+      "source": "007",
+      "target": "008",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-9",
-      "source": "8",
-      "target": "9",
+      "source": "008",
+      "target": "009",
       "edge_type": "funded_by"
     },
     {
       "id": "edge-10",
-      "source": "9",
-      "target": "10",
+      "source": "009",
+      "target": "010",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-11",
+      "source": "000",
+      "target": "011",
+      "edge_type": "funded_by"
+    },
+    {
+      "id": "edge-12",
+      "source": "000",
+      "target": "010",
       "edge_type": "funded_by"
     }
   ]
